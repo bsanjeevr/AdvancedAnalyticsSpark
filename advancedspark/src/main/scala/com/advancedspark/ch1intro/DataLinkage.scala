@@ -119,7 +119,7 @@ object DataLinkage extends Serializable {
       map(s => s.md.matched).countByValue().foreach(println)
 
   }
-
+  //using mapPartitions
   def statsWithMissing(rdd: RDD[Array[Double]]): Array[NAStatCounter] = {
     val nastats = rdd.mapPartitions((iter: Iterator[Array[Double]]) => {
       val nas: Array[NAStatCounter] = iter.next().map(d => NAStatCounter(d))
