@@ -112,7 +112,8 @@ object DataLinkage extends Serializable {
       val score = Array(2, 4, 6, 7, 8).map(i => naz(md.scores(i))).sum
       Scored(md, score)
     })
-
+    
+    //final steps
     ct.filter(s => s.score >= 4.0).
       map(s => s.md.matched).countByValue().foreach(println)
     ct.filter(s => s.score >= 2.0).
