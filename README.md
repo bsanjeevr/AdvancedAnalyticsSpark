@@ -16,7 +16,7 @@ Unzip and just using block 1 csv since running on local machine
 `$ unzip 'block_*.zip'`
 
 ### Putting the data in HDFS
-#### Cintro1: Data Linkage
+### Cintro1: Data Linkage
 `$ hadoop fs -mkdir linkage`
 `$ hadoop fs -put block_*.csv linkage`
 
